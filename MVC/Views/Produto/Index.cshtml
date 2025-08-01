@@ -1,0 +1,25 @@
+﻿@model List<MVC.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produto";
+}
+
+<h2>Lista de Produtos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Nome</td>
+                <td>@produto.Preco.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
